@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-cream: hsl(30, 38%, 92%);
+
+    /* Neutral Colors */
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: .5rem;
+    background-color: var(--color-cream);
+    color: var(--color-dark-grayish-blue);
+}
+
+main {
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.content {
+    margin: 0;
+    padding: 1.5rem;
+
+}
+
+header p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+#product-name {
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+    color: var(--color-very-dark-blue);
+    line-height: 1;
+    margin-top: 0;
+}
+
+#price {
+    font-family: 'Fraunces', serif;
+    color: var(--color-dark-cyan);
+    margin: 0;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    border: none;
+    border-radius: 10px;
+    gap: .5rem;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+}
+button:active{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 21%);;
+}
+
+picture img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (min-width:50em) {
+    html{
+        height: 100vh;
+    }
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;    
+        box-sizing: border-box;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        height: 60%;
+        width: 40%;
+        box-sizing: border-box;   
+    }
+    picture{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .content{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between; 
+        overflow: hidden;
+        
+    }
+    picture img {
+        content: url(./images/image-product-desktop.jpg);
+        border-radius: 10px 0 0 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* utility classes */
+.strike {
+    text-decoration: line-through;
+}
+
+.dark-cyan {
+    background-color: var(--color-dark-cyan);
+}
